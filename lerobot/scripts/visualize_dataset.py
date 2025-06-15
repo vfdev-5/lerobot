@@ -283,7 +283,7 @@ def main():
     tolerance_s = kwargs.pop("tolerance_s")
 
     logging.info("Loading dataset")
-    dataset = LeRobotDataset(repo_id, root=root, tolerance_s=tolerance_s)
+    dataset = LeRobotDataset(repo_id, root=root, tolerance_s=tolerance_s, video_backend="pyav")
 
     visualize_dataset(dataset, **vars(args))
 

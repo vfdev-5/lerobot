@@ -167,6 +167,9 @@ def init_keyboard_listener():
                 print("Escape key pressed. Stopping data recording...")
                 events["stop_recording"] = True
                 events["exit_early"] = True
+            elif key == keyboard.Key.space:
+                print("Space key pressed. Pause data recording...")
+                events["pause_recording"] = True
         except Exception as e:
             print(f"Error handling key press: {e}")
 
