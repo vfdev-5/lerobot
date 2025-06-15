@@ -55,12 +55,14 @@ from lerobot.common.robots import (  # noqa: F401
     Robot,
     RobotConfig,
     koch_follower,
+    fl_cook_follower,
     make_robot_from_config,
     so100_follower,
     so101_follower,
 )
 from lerobot.common.teleoperators import (  # noqa: F401
     Teleoperator,
+    fl_cook_leader,
     TeleoperatorConfig,
     make_teleoperator_from_config,
 )
@@ -95,9 +97,9 @@ class DatasetRecordConfig:
     # Limit the frames per second.
     fps: int = 30
     # Number of seconds for data recording for each episode.
-    episode_time_s: int | float = 60
+    episode_time_s: int | float = 900
     # Number of seconds for resetting the environment after each episode.
-    reset_time_s: int | float = 60
+    reset_time_s: int | float = 900
     # Number of episodes to record.
     num_episodes: int = 50
     # Encode frames in the dataset into video

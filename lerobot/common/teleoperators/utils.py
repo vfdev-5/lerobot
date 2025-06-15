@@ -49,5 +49,9 @@ def make_teleoperator_from_config(config: TeleoperatorConfig) -> Teleoperator:
         from .gamepad.teleop_gamepad import GamepadTeleop
 
         return GamepadTeleop(config)
+    elif config.type == "fl_cook_leader":
+        from .fl_cook_leader import FLCookLeader
+
+        return FLCookLeader(config)
     else:
         raise ValueError(config.type)
